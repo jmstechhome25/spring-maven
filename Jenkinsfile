@@ -4,13 +4,6 @@ pipeline {
         maven "Maven"
     }
     stages {
-        stage("Clone code from VCS") {
-            steps {
-                script {
-                    git 'https://github.com/maheshwar807/spring-boot-rest-api.git';
-                }
-            }
-        }
         stage("Maven Install") {
             steps {
                 script {
