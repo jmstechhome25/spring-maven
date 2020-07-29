@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     configFileProvider([configFile(fileId: '28b2ee07-1d47-41e8-8cde-1cfe4bbef73a', variable: 'MAVEN_GLOBAL_SETTINGS')]){
-                        sh "mvn clean deploy -e -X -DskipTests -s $MAVEN_GLOBAL_SETTINGS"
+                        sh "mvn deploy:deploy -DskipTests -s $MAVEN_GLOBAL_SETTINGS"
                     }
                 }
             }
